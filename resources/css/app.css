@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .element-center {
+        @apply flex items-center justify-center;
+    }
+
+    .element-center-col {
+        @apply flex flex-col items-center justify-center;
+    }
+}
+
+.v-enter-active,
+.v-leave-active {
+    transition: opacity 0.4s linear;
+}
+
+.v-enter-from,
+.v-leave-to {
+    opacity: 0;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.4s linear;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+    opacity: 0;
+}
+
+.bounce-enter-active {
+    animation: bounce-in 0.4s;
+}
+
+.bounce-leave-active {
+    animation: bounce-in 0.4s reverse;
+}
+
+@keyframes bounce-in {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1.25);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.slide-fade-enter-active {
+    transition: all 0.4s ease-out;
+}
+
+.slide-fade-leave-active {
+    transition: all 0.4s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+    transform: translateX(20px);
+    opacity: 0;
+}
+
+input[type="date"] {
+    background-color: #fff;
+    color: #333;
+}
+
+input[type="date"]:focus {
+    outline: none;
+    border-color: #4C51BF;
+    box-shadow: 0 0 0 2px rgba(72, 85, 99, 0.6);
+}
+
+input[type="date"].dark {
+    background-color: #2D3748;
+    color: #E2E8F0;
+}
+
+input[type="date"].dark:focus {
+    border-color: #4C51BF;
+    box-shadow: 0 0 0 2px rgba(72, 85, 99, 0.6);
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background-color: #4C51BF;
+    color: #fff;
+    border-radius: 50%;
+}
