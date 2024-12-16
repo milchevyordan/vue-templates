@@ -54,3 +54,9 @@ export interface DatabaseImage {
     created_at: Date;
     updated_at: Date;
 }
+
+export interface DeleteForm {
+    id: number,
+    name: string,
+    created_at: Date,
+}
